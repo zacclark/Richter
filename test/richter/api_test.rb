@@ -1,9 +1,8 @@
-require '../../lib/richter/api'
-require 'minitest/autorun'
-require 'minitest/reporters'
-MiniTest::Reporters.use!
+require File.join(File.expand_path(File.dirname(__FILE__)), 'test_helper')
+require File.join(File.expand_path(File.dirname(__FILE__)), '..', '..', 'lib', 'richter', 'api')
+
 require 'rack/test'
-require 'json'
+
 
 describe Richter::API do
   include Rack::Test::Methods
